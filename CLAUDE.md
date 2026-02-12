@@ -96,11 +96,23 @@ SaikouChecklist/
 5. **API keys in Keychain ONLY**. Never UserDefaults, never plist.
 6. **Memos never sent to AI**. Only scores, categories, and trends.
 
-## Requirements Documents
+## Requirements Documents — 読み分けガイド
 
-Unified requirements: `docs/requirements.md` (consolidated from docs/sections/)
-Section sources: `docs/sections/01_overview.md` through `08_technical.md`
-Character research: `docs/sections/characters/*.md`
+統合版: `docs/requirements.md`（3,700行。全セクション結合）
+個別版: `docs/sections/01_overview.md` 〜 `08_technical.md`
+
+**作業内容に応じて読むべきセクション:**
+
+| やること | 読むファイル | 主な内容 |
+|---|---|---|
+| **Domain/Check 実装** | `03_check_items.md` + `02_domain_model.md` | 25項目定義、スコア仕様、LogicalDate、Category enum |
+| **FeedbackEngine 実装** | `05_feedback.md` + `02_domain_model.md` | Priority 0-7 ルール、cold start、移動平均、閾値 |
+| **キャラクター実装** | `04_characters.md` + `characters/*.md` | 8人の口調・性格、選出ロジック、解放条件、テンプレート75本 |
+| **通知実装** | `06_notification.md` | 通知タイムライン、リッチ通知、ディープリンク |
+| **UI/画面実装** | `07_ui_ux.md` | 11画面ワイヤーフレーム、色・フォント、ウィジェット、オンボーディング |
+| **Infrastructure 実装** | `08_technical.md` + `02_domain_model.md` | SwiftData、Claude API、Keychain、WidgetKit連携、パフォーマンス要件 |
+| **全体設計の確認** | `01_overview.md` + `02_domain_model.md` | コンセプト、4境界コンテキスト、ドメインイベント、ロードマップ |
+| **キャラの史実確認** | `characters/{name}.md` | 個別武将の史実・逸話・名言（muneshige/dosetsu/ginchiyo/joun/yufu/totoki/ono/komono/netabi） |
 
 ## Useful Commands
 

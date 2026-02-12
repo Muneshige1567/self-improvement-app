@@ -47,7 +47,9 @@
       "Bash(do cp -r \"$d\" \"C:/Users/shibu/dev/self-improvement-app/.claude/skills/$d\")",
       "Bash(for f in security-reviewer.md doc-updater.md planner.md refactor-cleaner.md build-error-resolver.md e2e-runner.md)",
       "Bash(do cp \"$f\" \"C:/Users/shibu/dev/self-improvement-app/.claude/agents/$f\")",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
